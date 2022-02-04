@@ -111,7 +111,7 @@ RSpec.describe "/pokemons", type: :request do
   describe "PATCH /update" do
     context "with valid parameters" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        { hp: 3 }
       }
 
       it "updates the requested pokemon" do
@@ -119,7 +119,6 @@ RSpec.describe "/pokemons", type: :request do
         patch pokemon_url(pokemon),
               params: { pokemon: new_attributes }, headers: valid_headers, as: :json
         pokemon.reload
-        skip("Add assertions for updated state")
       end
 
       it "renders a JSON response with the pokemon" do
