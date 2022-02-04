@@ -10,7 +10,6 @@ RSpec.describe PokemonsController, type: :routing do
       expect(get: "/pokemons/1").to route_to("pokemons#show", id: "1")
     end
 
-
     it "routes to #create" do
       expect(post: "/pokemons").to route_to("pokemons#create")
     end
